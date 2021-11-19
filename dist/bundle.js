@@ -7,7 +7,6 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/bar.js":
@@ -16,7 +15,18 @@
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ bar)\n/* harmony export */ });\nfunction bar() {\n  console.log(\"bar\");\n}\n\n\n//# sourceURL=webpack://webpack/./src/bar.js?");
+
+/***/ }),
+
+/***/ "./src/foo.js":
+/*!********************!*\
+  !*** ./src/foo.js ***!
+  \********************/
+/***/ ((module) => {
+
+eval("function foo() {\n  console.log(\"foo\");\n}\n\n// CommonJS方式\nmodule.exports = foo;\n\n\n//# sourceURL=webpack://webpack/./src/foo.js?");
 
 /***/ }),
 
@@ -26,7 +36,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bar_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bar.js */ \"./src/bar.js\");\n\n\n(0,_bar_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n\n//# sourceURL=webpack://webpack/./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bar_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bar.js */ \"./src/bar.js\");\n\n// CommonJS方式\nconst foo = __webpack_require__(/*! ./foo.js */ \"./src/foo.js\");\n\n(0,_bar_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nfoo();\n\n\n//# sourceURL=webpack://webpack/./src/index.js?");
 
 /***/ })
 
