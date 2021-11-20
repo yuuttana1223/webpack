@@ -24,4 +24,20 @@ module.exports = {
       directory: path.join(__dirname, "dist"),
     },
   },
+  module: {
+    rules: [
+      {
+        // 拡張子が.jsのもの
+        test: /\.js$/,
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/react"],
+            },
+          },
+        ],
+      },
+    ],
+  },
 };
